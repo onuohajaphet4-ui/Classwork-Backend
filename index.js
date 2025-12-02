@@ -2,10 +2,16 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 import userRoutes from './route/user.js'
+import cors from 'cors'
 
-const app = express()
-app.use(express.json())
 dotenv.config()
+const app = express()
+app.use(cors({
+  origin: "*",
+  methods:'GET,POST,PUT,DELETE',
+  allowedHeaders:'Content-Type,Authorization'
+}))
+app.use(express.json())
 app.listen(3000, () => {
     console.log(`backend is running in port ${process.env.PORT}`)
 })

@@ -115,6 +115,7 @@ export const getAllStudents = async (req, res) => {
             user.password=password || user.password
             user.country=country || user.country
             user.state=state || user.state
+            
             await user.save()
 
              res.status(200).json({message: 'user succesfully updated', user: {
