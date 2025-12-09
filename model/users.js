@@ -2,25 +2,25 @@ import mongoose from "mongoose";
 const cohortFourSchmema = new mongoose.Schema(
     {
         names:{
-            type:String , require:true  
+            type:String , required:true  
         },
         email:{
-            type:String , require:true , unique:true
+            type:String , required:true , unique:true
         },
          phoneNumber:{
-            type:String , require:true , unique:true
+            type:String , required:true , unique:true
         },
          password:{
-            type:String , require:true 
+            type:String , required:true 
         },
          country:{
-            type:String , require:false 
+            type:String , required:false 
         },
          state:{
-            type:String , require:false 
+            type:String , required:false 
         },
         address:{
-            type:String , require:false 
+            type:String , required:false 
         },
 
     }, 
