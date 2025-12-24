@@ -110,7 +110,7 @@ export const getAllUser = async (req, res) => {
  //Request for new password link
  
  export const forgotPassword = async  (req, res) => {
-    console.log("forgot password api")
+    // console.log("forgot password api")
     const {email} = req.body
 
     try {
@@ -144,9 +144,9 @@ export const getAllUser = async (req, res) => {
        //create rest link
        const resetUrl= `http://localhost:5173/reset-password/${token}`
 
-       console.log("RESET PASSWORD LINK:", resetUrl)
+    //    console.log("RESET PASSWORD LINK:", resetUrl)
 
-       res.json({message:"Reset link sent"})
+       res.json({message:"Reset link sent",token})
 
         
     } catch (error) {
