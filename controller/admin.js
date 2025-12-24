@@ -142,7 +142,7 @@ export const getAllUser = async (req, res) => {
 
 
        //create rest link
-       const resetUrl= `http://localhost:5173/reset-password/${token}`
+       const resetUrl= `https://yati-eight.vercel.app/reset-password/${token}`
 
     //    console.log("RESET PASSWORD LINK:", resetUrl)
 
